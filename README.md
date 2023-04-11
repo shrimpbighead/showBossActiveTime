@@ -1,0 +1,2 @@
+# showBossActiveTime
+给boss直聘的搜索结果加上hr活跃状态，少看点半年活跃的岗位

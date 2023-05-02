@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         showBossActiveTime
 // @namespace    http://www.chensong.cc/
-// @version      0.4
+// @version      0.4.2
 // @description  to show hr lastest login time,help you deliver your resume efficiently.
 // @author       chensong
 // @match        https://www.zhipin.com/web/geek/job
@@ -22,7 +22,7 @@
       this.startTime = null;//记录是否是当前列表数据的循环，如果没查询完毕就重新触发的新的实例化，需要去停止旧的查询循环
       this.statusOptions = localStorage
         .getItem('bossActiveStatusList')
-        ?.split(',') || [
+        ?.split(',').filter(t=>t.length) || [
         '半年前活跃',
         '近半年活跃',
         '4月前活跃',
